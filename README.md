@@ -29,10 +29,10 @@ cargo build
 En el archivo **main.rs** coloca tus llaves:
 
 ```rust
-    const SKEY: &str = "INSERTE_SU_LLAVE_PRIVADA";
-    const PKEY: &str = "INSERTE_SU_LLAVE_PUBLICA";
-    const RSAID: &str = "INSERTE_SU_RSA_ID";
-    const CULQI_RSA_KEY: &str = "INSERTE_SU_LLAVE_RSA";
+    let SKEY: &str = "INSERTE_SU_LLAVE_PRIVADA";
+    let PKEY: &str = "INSERTE_SU_LLAVE_PUBLICA";
+    let RSAID: &str = "INSERTE_SU_RSA_ID";
+    let CULQI_RSA_KEY: &str = "INSERTE_SU_LLAVE_RSA";
 ```
 
 
