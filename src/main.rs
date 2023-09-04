@@ -172,14 +172,15 @@ enum CustomRejection {
 impl Reject for CustomRejection {}
 
 async fn create_card(input: BodyCard) -> Result<impl Reply, Rejection> {
-    
+    let pk = "pk_test_90667d0a57d45c48";
+    let sk = "sk_test_1573b0e8079863ff";
     // Convertir el input a JSON y manejar errores de serialización
     let body = match serde_json::to_string(&input) {
         Ok(json_str) => json_str,
         Err(e) => return Ok(warp::reply::with_status(warp::reply::html(format!("Serialization error: {}", e)), StatusCode::BAD_REQUEST)),
     };
     
-    match create(&body, "cards").await {
+    match create(&body, "cards", pk, sk).await {
         Ok((response_text, status_code)) => {
             println!("Status Code: {}", status_code);
             println!("Response Text: {}", response_text);
@@ -202,14 +203,15 @@ async fn create_card(input: BodyCard) -> Result<impl Reply, Rejection> {
 }
 
 async fn create_customer(input: BodyCustomer) -> Result<impl Reply, Rejection> {
-    
+    let pk = "pk_test_90667d0a57d45c48";
+    let sk = "sk_test_1573b0e8079863ff";
     // Convertir el input a JSON y manejar errores de serialización
     let body = match serde_json::to_string(&input) {
         Ok(json_str) => json_str,
         Err(e) => return Ok(warp::reply::with_status(warp::reply::html(format!("Serialization error: {}", e)), StatusCode::BAD_REQUEST)),
     };
     
-    match create(&body, "customers").await {
+    match create(&body, "customers", pk, sk).await {
         Ok((response_text, status_code)) => {
             println!("Status Code: {}", status_code);
             println!("Response Text: {}", response_text);
@@ -233,14 +235,15 @@ async fn create_customer(input: BodyCustomer) -> Result<impl Reply, Rejection> {
 
 async fn generate_charge(input: BodyCharge) -> Result<impl Reply, Rejection> {
 
-
+    let pk = "pk_test_90667d0a57d45c48";
+    let sk = "sk_test_1573b0e8079863ff";
     // Convertir el input a JSON y manejar errores de serialización
     let body = match serde_json::to_string(&input) {
         Ok(json_str) => json_str,
         Err(e) => return Ok(warp::reply::with_status(warp::reply::html(format!("Serialization error: {}", e)), StatusCode::BAD_REQUEST)),
     };
     
-    match create(&body, "charges").await {
+    match create(&body, "charges", pk, sk).await {
         Ok((response_text, status_code)) => {
             println!("Status Code: {}", status_code);
             println!("Response Text: {}", response_text);
@@ -266,14 +269,15 @@ async fn generate_charge(input: BodyCharge) -> Result<impl Reply, Rejection> {
 async fn generate_order(input: InputData) -> Result<impl Reply, Rejection> {
 
     println!("Amount: {}", input.amount);
-    
+    let pk = "pk_test_90667d0a57d45c48";
+    let sk = "sk_test_1573b0e8079863ff";
     // Convertir el input a JSON y manejar errores de serialización
     let body = match serde_json::to_string(&input) {
         Ok(json_str) => json_str,
         Err(e) => return Ok(warp::reply::with_status(warp::reply::html(format!("Serialization error: {}", e)), StatusCode::BAD_REQUEST)),
     };
     
-    match create(&body, "orders").await {
+    match create(&body, "orders", pk, sk).await {
         Ok((response_text, status_code)) => {
             println!("Status Code: {}", status_code);
             println!("Response Text: {}", response_text);
