@@ -18,9 +18,9 @@ dependencies = [
 
 [[package]]
 name = "LibCulqi"
-version = "1.0.0"
+version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cc69c0feb81982d3b277b70e0c1ed650243e461d9b07c05bd40e5bc96ffeee4e"
+checksum = "fa33a9fc0e9f85f6ffe9e8fcbc3fcbbc302fbc52c7343731a8c8472d28715aac"
 dependencies = [
  "aes",
  "aes-gcm",
