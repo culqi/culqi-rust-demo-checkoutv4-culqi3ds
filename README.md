@@ -26,21 +26,21 @@ cargo build
 
 ## Configuración backend
 
-En el archivo **main.rs** coloca tus llaves:
+En el archivo **src/main.rs** configura tus llaves:
 
 ```rust
-    let SKEY: &str = "INSERTE_SU_LLAVE_PRIVADA";
-    let PKEY: &str = "INSERTE_SU_LLAVE_PUBLICA";
-    let RSAID: &str = "INSERTE_SU_RSA_ID";
-    let CULQI_RSA_KEY: &str = "INSERTE_SU_LLAVE_RSA";
+let SKEY: &str = "Llave pública del comercio (pk_test_xxxxxxxxx)";
+let PKEY: &str = "Llave secreta del comercio (sk_test_xxxxxxxxx)";
+let RSAID: &str = "Id de la llave RSA";
+let CULQI_RSA_KEY: &str = "Llave pública RSA que sirve para encriptar el payload de los servicios";
 ```
 
 
 ## Configuración frontend
-Para configurar los datos del cargo, pk del comercio, rsa_id, rsa_public_key y datos del cliente se tiene que modificar en el archivo `js/config/index.js`.
+Para configurar los datos del cargo, pk del comercio, rsa_id, rsa_public_key y datos del cliente se tiene que modificar en el archivo `static/js/config/index.js`.
 
 ```js
-export default Object.freeze({
+export default Object.freeze({ss
   TOTAL_AMOUNT: 600,
   CURRENCY: "PEN",
   PUBLIC_KEY: "Llave pública del comercio (pk_test_xxxxxxxxx)",
