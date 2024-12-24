@@ -30,7 +30,8 @@ class Service {
 	        //response = data;
 	      }
 	    });
-	    const responseJSON = await response;console.log('statusCode',statusCode);
+	    const responseJSON = await response;
+      console.log('statusCode',statusCode);
 	    return { statusCode: statusCode, data: responseJSON }
     } catch (err) {
       return { statusCode: statusCode, data: null }

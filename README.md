@@ -62,7 +62,7 @@ cargo run
 Para poder visualizar el frontend de la demo ingresar a la siguiente URL:
 
 - Para probar cargos: http://localhost:3030/index.html
-- Para probar creación de cards: http://localhost:3030/index_card.html
+- Para probar creación de cards: http://localhost:3030/index-card.html
 
 ## Documentación
 

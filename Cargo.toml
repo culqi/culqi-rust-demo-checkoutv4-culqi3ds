@@ -1,16 +1,20 @@
 [package]
 name = "DemoRust"
 version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+edition = "2024"
 
 [dependencies]
-warp = "0.3"
-serde_json = "1.0"
-tokio = { version = "1", features = ["full"] }
-tracing = "0.1"
-tracing-subscriber = "0.2"
-serde = { version = "1", features = ["derive"] }
-LibCulqi = "1.0.1"
-reqwest = "0.11"
+nom = "7.1.3"
+anyhow = "1.0.95"
+warp = "0.3.7"
+serde_json = "1.0.134"
+tokio = { version = "1.42.0", features = ["full"] }
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
+serde = { version = "1.0.216", features = ["derive"] }
+#LibCulqi = "1.0.1"
+BrandoCulqi = "1.0.4"
+#BrandoCulqi = { git = "https://github.com/culqi/culqi-rust", rev = "9783c61f98a10eb2bad796c60154b719617e6f79"}
+#BrandoCulqi = { git = "https://github.com/culqi/culqi-rust", branch = "feature/arq-rust"}
+reqwest = "0.12.9"
+chrono = "0.4.39"
