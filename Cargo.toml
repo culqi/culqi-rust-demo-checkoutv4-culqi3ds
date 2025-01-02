@@ -12,9 +12,6 @@ tokio = { version = "1.42.0", features = ["full"] }
 tracing = "0.1.41"
 tracing-subscriber = "0.3.19"
 serde = { version = "1.0.216", features = ["derive"] }
-#LibCulqi = "1.0.1"
-BrandoCulqi = "1.0.4"
-#BrandoCulqi = { git = "https://github.com/culqi/culqi-rust", rev = "9783c61f98a10eb2bad796c60154b719617e6f79"}
-#BrandoCulqi = { git = "https://github.com/culqi/culqi-rust", branch = "feature/arq-rust"}
+LibCulqi = "1.0.2"
 reqwest = "0.12.9"
 chrono = "0.4.39"

@@ -1,4 +1,4 @@
-use BrandoCulqi::client::Client;
+use LibCulqi::client::Client;
 
 use super::credentials::{PUBLIC_KEY, RSA_KEY, SECRET_KEY};
 

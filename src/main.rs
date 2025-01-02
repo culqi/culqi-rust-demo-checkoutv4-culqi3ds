@@ -1,4 +1,4 @@
-use BrandoCulqi::culqi::{card::Card, charge::Charge, customer::Customer, order::Order};
+use LibCulqi::culqi::{card::Card, charge::Charge, customer::Customer, order::Order};
 use structs::{charge::BodyCharge, customer::BodyCustomer, order::BodyOrder};
 use tracing::{Level, info};
 use tracing_subscriber;
