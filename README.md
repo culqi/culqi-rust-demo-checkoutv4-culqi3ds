@@ -26,29 +26,30 @@ cargo build
 
 ## Configuración backend
 
-En el archivo **src/main.rs** configura tus llaves:
+En **src/main.rs**, reemplaza los placeholders por tus llaves de prueba. Usa una llave pública `pk_test_` y una llave privada `sk_test_`; la llave privada solo debe usarse en el backend.
 
 ```rust
-let SKEY: &str = "Llave pública del comercio (pk_test_xxxxxxxxx)";
-let PKEY: &str = "Llave secreta del comercio (sk_test_xxxxxxxxx)";
-let RSAID: &str = "Id de la llave RSA";
-let CULQI_RSA_KEY: &str = "Llave pública RSA que sirve para encriptar el payload de los servicios";
+let pk = "INSERTE_SU_LLAVE_PUBLICA";
+let sk = "INSERTE_SU_LLAVE_PRIVADA";
 ```
 
+No hagas commit de tus llaves.
 
 ## Configuración frontend
-Para configurar los datos del cargo, pk del comercio, rsa_id, rsa_public_key y datos del cliente se tiene que modificar en el archivo `static/js/config/index.js`.
+Para configurar los datos del cargo, la llave pública, el `rsa_id`, la llave RSA pública y los datos del cliente, modifica `static/js/config/index.js`. Usa tu llave pública `pk_test_` y las credenciales RSA generadas desde CulqiPanel.
 
 ```js
-export default Object.freeze({ss
+export default Object.freeze({
   TOTAL_AMOUNT: 600,
   CURRENCY: "PEN",
-  PUBLIC_KEY: "Llave pública del comercio (pk_test_xxxxxxxxx)",
+  PUBLIC_KEY: "INSERTE_SU_LLAVE_PUBLICA",
   COUNTRY_CODE: "PE",
-  RSA_ID: "Id de la llave RSA",
-  RSA_PUBLIC_KEY: 'Llave pública RSA que sirve para encriptar el payload de los servicios',
+  RSA_ID: "INSERTE_SU_RSA_ID",
+  RSA_PUBLIC_KEY: "INSERTE_SU_LLAVE_RSA",
 });
 ```
+
+No hagas commit de llaves. La demo realiza llamadas reales a Culqi; configura tus propias llaves de prueba antes de usarla.
 
 ## Inicializar la demo
 Ejecutar el siguiente comando:
